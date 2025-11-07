@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservasi - Kopi Santai</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1>Kopi Santai</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="reservation.html" class="active">Reservation</a>
+    </nav>
+  </header>
+
+  <section class="form-section">
+    <h2>Reservasi Meja</h2>
+    <form>
+      <fieldset>
+        <legend>Data Diri</legend>
+        <label>Nama Lengkap</label>
+        <input type="text" required>
+        <label>Email</label>
+        <input type="email" required>
+        <label>No. Telepon</label>
+        <input type="tel" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Detail Reservasi</legend>
+        <label>Tanggal</label>
+        <input type="date" required>
+        <label>Waktu</label>
+        <input type="time" required>
+        <label>Jumlah Orang</label>
+        <select>
+          <option>1</option><option>2</option><option>3</option><option>4</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Lainnya</legend>
+        <textarea placeholder="Catatan tambahan..."></textarea>
+        <label><input type="checkbox" required> Saya setuju dengan syarat dan ketentuan</label>
+      </fieldset>
+
+      <button type="submit" class="btn">Kirim Reservasi</button>
+    </form>
+  </section>
+
+  <aside>
+    <p>Atau hubungi kami via WhatsApp di <strong>0812-3456-7890</strong></p>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 Kopi Santai. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

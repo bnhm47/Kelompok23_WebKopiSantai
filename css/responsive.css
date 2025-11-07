@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+  .menu-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 40px 10px;
+  }
+}

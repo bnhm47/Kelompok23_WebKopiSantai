@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fffdf8;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+p, a, li, label, input, select, textarea, button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+h2 { font-size: 2rem; margin-bottom: 0.8rem; }
+h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+p { font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.7; }
+
+a {
+  text-decoration: none;
+  color: #6f4e37;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a97155;
+}
+
+header {
+  background-color: #f6efe7;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.navbar h1 {
+  color: #4e342e;
+}
+
+.navbar nav a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.navbar nav a.active {
+  color: #a97155;
+  font-weight: 600;
+}
+
+.navbar nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #a97155;
+  transition: width 0.3s;
+  width: 0%;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  background: url("../images/cafe-interior.jpg") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+section {
+  padding: 4rem 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu h2, .why-choose h2, .story h2, .values h2, .location h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.menu-grid, .why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.menu-grid article, .why-grid article {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-grid article:hover, .why-grid article:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.menu-grid img, .why-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-grid span {
+  display: block;
+  font-weight: 600;
+  color: #6f4e37;
+  margin-bottom: 1rem;
+}
+
+.menu-grid h3, .why-grid h3 {
+  margin-top: 0.8rem;
+  color: #3e2723;
+}
+
+footer {
+  background-color: #3e2723;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+footer p, footer address {
+  font-size: 0.9rem;
+}
+
+button, .btn {
+  background-color: #6f4e37;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover, .btn:hover {
+  background-color: #a97155;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  font-weight: 600;
+  color: #4e342e;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0.3rem;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #a97155;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input:invalid, textarea:invalid {
+  border-color: #d32f2f;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.menu-grid img:hover, .why-grid img:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+figcaption p:last-child {
+  background-color: #a97155;
+  color: #fff;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+th {
+  background-color: #f6efe7;
+  font-weight: 600;
+}
+
+aside {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .hero h2 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+  .navbar { flex-direction: column; }
+  .navbar nav a { margin: 0.5rem; }
+}
